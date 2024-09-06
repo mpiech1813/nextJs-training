@@ -2,6 +2,9 @@
 // app directory for pages only. src for components
 
 const Home = () => {
+  // to test error page
+  // throw new Error("error in home page");
+
   return <div>Homepage</div>;
 };
 
