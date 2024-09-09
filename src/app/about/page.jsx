@@ -3,9 +3,28 @@ import styles from "./about.module.css";
 
 export default function AboutPage() {
   return (
-    <div>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h2 className={styles.subtitle}>About Agency</h2>
+        <h1 className={styles.title}>We Create Brighter Future</h1>
+        <p className={styles.desc}>Lorem Ipsum Main Body Text Area</p>
+        <div className={styles.boxes}>
+          <div className={styles.box}>
+            <h1 className={styles.title}>10 K</h1>
+            <p className={styles.desc}>Years</p>
+          </div>
+          <div className={styles.box}>
+            <h1 className={styles.title}>10 K</h1>
+            <p className={styles.desc}>Years</p>
+          </div>
+          <div className={styles.box}>
+            <h1 className={styles.title}>10 K</h1>
+            <p className={styles.desc}>Years</p>
+          </div>
+        </div>
+      </div>
       <div className={styles.imgContainer}>
-        <Image src="/about.jpg" alt="kol" fill />
+        <Image className={styles.img} src="/about.jpg" alt="kol" fill />
       </div>
     </div>
   );
