@@ -13,4 +13,3 @@ export default function AboutPage() {
 
 // to add images from remote addresses, video: 1:05:48
 // next.config.js > images:{ remotePatterns: [{}]}
-// finishing today at 1:06:37
