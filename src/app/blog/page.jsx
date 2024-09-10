@@ -21,12 +21,27 @@ import { getPosts } from "@/lib/data";
 //   return res.json();
 // };
 
+// FETCH DATA FROM MY OWN API
+// const getData = async () => {
+//   // next caches the responses, but in order to prevent that, add cache: 'no-store'
+//   const res = await fetch("https://localhost:3000/api/posts");
+
+//   if (!res.ok) {
+//     throw new Error("fetching post data error");
+//   }
+
+//   return res.json();
+// };
+
 export default async function BlogPage() {
   // FETCH DATA WITH API
   // const posts = await getData();
 
   // FETCH DATA WITHOUT API
   const posts = await getPosts();
+
+  // FETCH DATA WITH MY OWN API
+  // const posts = await getData();
 
   return (
     <div className={styles.container}>
