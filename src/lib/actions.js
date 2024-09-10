@@ -24,3 +24,25 @@ export const handleLogin = async () => {
 export const handleLogOut = async () => {
   await signOut();
 };
+
+const User = "comes from mongoose";
+export const ragister = async (formData) => {
+  const { username, email, password, passwordRepeat } =
+    Object.fromEntries(formData);
+
+  if (password !== passwordRepeat) return "password doesnt match";
+  try {
+    // connect to db
+    // look for the user in db
+
+    const newuser = new User({
+      username,
+      email,
+      password,
+    });
+
+    //push to db
+  } catch (error) {
+    console.log("error registering new user");
+  }
+};
