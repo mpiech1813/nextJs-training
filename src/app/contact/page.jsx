@@ -9,6 +9,11 @@ import dynamic from "next/dynamic";
 //   ssr: false,
 // });
 
+export const metadata = {
+  title: "Next App Contact Page",
+  description: "Contact description",
+};
+
 export default function ContactPage() {
   return (
     <div className={styles.container}>
