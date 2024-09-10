@@ -42,6 +42,7 @@ export const ragister = async (formData) => {
     });
 
     //push to db
+    // redirect to home page
   } catch (error) {
     console.log("error registering new user");
   }
