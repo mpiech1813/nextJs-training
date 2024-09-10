@@ -14,6 +14,17 @@ import { getPost } from "@/lib/data";
 //   return res.json();
 // };
 
+// create custom metadata
+export const generateMetadata = async ({ params }) => {
+  const { slug } = params;
+  const post = await getPost(slug);
+
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+};
+
 export default async function SinglePostPage({ params }) {
   const { slug } = params;
 

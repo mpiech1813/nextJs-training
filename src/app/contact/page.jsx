@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 // });
 
 export const metadata = {
-  title: "Next App Contact Page",
+  title: "Contact Page",
   description: "Contact description",
 };
 
