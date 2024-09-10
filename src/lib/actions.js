@@ -1,12 +1,7 @@
-export const sayHello = async () => {
-  "use server";
-
-  console.log("hello");
-};
+"use server";
+import { auth, signIn, signOut } from "@/lib/auth";
 
 export const addPost = async (formData) => {
-  "use server";
-
   //   const title = formData.get("title");
   //   const desc = formData.get("desc");
   //   const slug = formData.get("slug");
@@ -20,4 +15,12 @@ export const addPost = async (formData) => {
   } catch (error) {
     console.log("error in actions add post");
   }
+};
+
+export const handleLogin = async () => {
+  await signIn("github");
+};
+
+export const handleLogOut = async () => {
+  await signOut();
 };
