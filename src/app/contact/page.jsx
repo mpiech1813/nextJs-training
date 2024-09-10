@@ -3,9 +3,11 @@ import styles from "./contact.module.css";
 import dynamic from "next/dynamic";
 // import HydrationTest from "@/components/hydrationTest";
 
-const HydrationTestNoSSR = dynamic(() => import("@/components/hydrationTest"), {
-  ssr: false,
-});
+// preventing hydration 1:58
+
+// const HydrationTestNoSSR = dynamic(() => import("@/components/hydrationTest"), {
+//   ssr: false,
+// });
 
 export default function ContactPage() {
   return (
@@ -19,7 +21,9 @@ export default function ContactPage() {
         />
       </div>
       <div className={styles.formContainer}>
-        <HydrationTestNoSSR />
+        {/* <HydrationTestNoSSR /> */}
+        {/* <div suppressHydrationWarning>{a}</div> */}
+        {/* above can be usedas alternative to Hydration Test component  */}
         <form action="" className={styles.form}>
           <input type="text" placeholder="Name" />
           <input type="text" placeholder="email" />

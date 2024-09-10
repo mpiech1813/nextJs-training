@@ -12,7 +12,6 @@ pnpm install
 bun install
 ```
 
-
 run the development server:
 
 ```bash
@@ -26,3 +25,7 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Link to Video
+
+https://www.youtube.com/watch?v=vCOSTG10Y4o&ab_channel=LamaDev
