@@ -1,5 +1,18 @@
 import Image from "next/image";
 import styles from "./contact.module.css";
+import dynamic from "next/dynamic";
+// import HydrationTest from "@/components/hydrationTest";
+
+// preventing hydration 1:58
+
+// const HydrationTestNoSSR = dynamic(() => import("@/components/hydrationTest"), {
+//   ssr: false,
+// });
+
+export const metadata = {
+  title: "Contact Page",
+  description: "Contact description",
+};
 
 export default function ContactPage() {
   return (
@@ -13,6 +26,9 @@ export default function ContactPage() {
         />
       </div>
       <div className={styles.formContainer}>
+        {/* <HydrationTestNoSSR /> */}
+        {/* <div suppressHydrationWarning>{a}</div> */}
+        {/* above can be usedas alternative to Hydration Test component  */}
         <form action="" className={styles.form}>
           <input type="text" placeholder="Name" />
           <input type="text" placeholder="email" />
